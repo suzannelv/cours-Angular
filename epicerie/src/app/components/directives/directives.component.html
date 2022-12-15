@@ -1,0 +1,25 @@
+<p [ngStyle]="{color: colorTS}">directives works!</p>
+<p [ngStyle]="{color: valid? 'green' : 'red'}">directives works!</p>
+<h1 [ngClass]="{'text-success': valid == true}">Text-succes</h1>
+
+
+<!-- if...else : ngIf -->
+<p *ngIf="valid == true; else elseTemplate" class="border-bottom text-secondary">
+    validé
+</p>
+<ng-template #elseTemplate>
+    non validé
+</ng-template>
+
+<!-- for: ngFor -->
+<p *ngFor="let item of animaux" class="border-bottom text-secondary">{{item}}</p>
+<p *ngFor="let item of animauxObj" [ngStyle]="{color: 'red'}">{{item.name}}: ({{item.quantity}})</p>
+
+
+
+
+<!-- index -->
+<p *ngFor="let item of animaux; let i = index" class="border-bottom text-primary">{{item}}{{i}}</p>
+
+
+

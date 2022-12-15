@@ -1,7 +1,17 @@
+
 <p>{{title}}test works!
 <br>
 price:{{price}}
 <br>
+<!-- il s'agit d'une méthode, pensez aux parenthèses 
+ -->
 {{ttc(price)}}t.t.c.
+<!-- l'attribut disabled est rendu dynamique avec les  -->
+<button (mouseenter)="loadMore()" [disabled]="!more">Afficher plus</button>
+
+<button (click)="loadMore()" class="bg-success">Afficher plus</button>
 </p>
 
+<img src="/assets/1.jpg" alt="">
+
+<div></div>

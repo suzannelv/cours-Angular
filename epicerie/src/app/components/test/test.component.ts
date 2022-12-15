@@ -6,15 +6,24 @@ import { Component, createPlatform } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
-   title = 'Mon application';
-   price = 10;
+   title:string = 'Mon application';
+   price:number = 10;
+
+   total:number =4;
+   more:boolean = false;
+
    constructor(){
-   console.log(this.title);
-   
-   
+    console.log(this.title);
+    if (this.total > 3) this.more = true;
    }
-   ttc (prix:number) {  
-    return prix * 1.2
+
+
+   ttc = (prix:number) => prix * 1.2
+   
+
+   loadMore () {
+     console.log('acheter');
+     
    }
 
    
