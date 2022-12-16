@@ -3,10 +3,18 @@
 <a routerLink="**">error</a> -->
 <div class="container">
     <h1 class="text-center my-5">Liste de nos produits</h1>
+    <p class="text-danger text-center">{{ error }}</p>
     <div class="row justify-content-center">
 
+
+        <app-produit-card *ngFor="let fruit of produits; let i = index"  class="card col-sm-12 col-md-3 text-start mx-2 my-2" [fruit]="fruit" [i] = "i" >
+
+        </app-produit-card >
+
+
+
         <div *ngFor="let fruit of produits; let i = index"  class="card col-sm-12 col-md-3 text-start mx-2 my-2">
-            <img class="card-img-top" src="{{fruit.img}}" alt="{{fruit.name}}" />
+            <!-- <img class="card-img-top" src="{{fruit.img}}" alt="{{fruit.name}}" />
         <div class="card-body" [ngClass]="fruit.stock >= 5 ? 't-class' :'f-class' " >
          
                 <h5 class="card-title">{{fruit.name | uppercase}}</h5>
@@ -18,7 +26,7 @@
                 <a class="btn btn-secondary d-block mt-4" [routerLink]="[ '/produits',i]" > Modifier </a>
               
                 <button class= "btn btn-danger d-block mt-2 w-100" (click)="deleteProduitEl(i)">Supprimer</button>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

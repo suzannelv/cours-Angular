@@ -23,14 +23,17 @@ export class ProduitsService {
    ]
   constructor() { }
 //  ici, on fera une demande ), l'API
-   readProduit() {
+   readProduits() {
     return this.produits
+   }
+   readProduit(id:number) {
+    return this.produits[id]
    }
 
    deleteEl (i:number) {
-  console.log();
-  
-    this.produits.splice(i, 1)
-   }
+    console.log();
+    
+      this.produits.splice(i, 1)
+     }
 
 }

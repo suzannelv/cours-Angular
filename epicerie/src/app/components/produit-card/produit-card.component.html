@@ -1,0 +1,15 @@
+
+    <img class="card-img-top" src="{{fruit.img}}" alt="{{fruit.name}}" />
+
+<div class="card-body" [ngClass]="fruit.stock >= 5 ? 't-class' :'f-class' " >
+ 
+        <h5 class="card-title">{{fruit.name | uppercase}}</h5>
+        <p class="card-text text-success fw-semibold"  *ngIf="fruit.stock > 5">En stock ( {{fruit.stock}} )</p>
+        <p class="card-text fw-semibold text-danger" *ngIf="fruit.stock <= 5">Stock faible( {{fruit.stock}} )</p>
+
+
+        <p class="card-text fw-semibold ">{{fruit.price}} €</p>
+        <a class="btn btn-secondary d-block mt-4" [routerLink]="[ '/produits',i]" > Modifier </a>
+      
+        <button class= "btn btn-danger d-block mt-2 w-100" (click)="deleteProduitEl(i)">Supprimer</button>
+    </div>

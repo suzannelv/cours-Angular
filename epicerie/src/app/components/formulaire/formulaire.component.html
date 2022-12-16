@@ -1,0 +1,57 @@
+<!-- <p>{{name}}</p>
+
+  <input type="text" [(ngModel)]="name">
+
+<form #animalForm="ngForm" (ngSubmit)="onSubmit(animalForm)">
+    <input type="text" name="animal" ngModel>
+    <input type="text" name="test" ngModel>
+  
+    <button type="submit">Envoyer</button>
+</form> -->
+<div class="card">
+    <form class="card-body" #produitForm="ngForm" (ngSubmit)="onSubmit(produitForm)">
+      <div class="mb-3">
+        <p class="text-danger" *ngIf="produitName.invalid && (produitName.dirty || produitName.touched) ">Ce champ a une erreur :</p>
+        <label class="form-label">Nom :</label>
+        <input
+          type="text"
+          class="form-control"
+          minlength="3"
+          required
+          name="produitName"
+          #produitName="ngModel"
+          ngModel
+        />
+      </div>
+
+
+      <div class="mb-3">
+        <p class="text-danger" *ngIf="produitPrice.invalid && (produitPrice.dirty || produitPrice.touched)">Ce champ a une erreur :</p>
+        <label class="form-label">Prix :</label>
+        <input
+          type="number"
+          class="form-control"
+          required
+          name="produitPrice"
+          #produitPrice="ngModel"
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <p class="text-danger" *ngIf="produitStock.invalid && (produitStock.dirty || produitStock.touched)">Ce champ a une erreur :</p>
+        <label class="form-label">Stock :</label>
+        <input
+          type="number"
+          class="form-control"
+          required
+          name="produitStock"
+          #produitStock="ngModel"
+          ngModel
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary w-100" [disabled]="produitForm.invalid">
+        Submit
+      </button>
+    </form>
+  </div>

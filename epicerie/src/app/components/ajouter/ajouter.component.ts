@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ajouter.component.css']
 })
 export class AjouterComponent {
-
+  produitReceive: string;
+  onUpdate(info: string = 'épuisé') {
+    this.produitReceive = info;
+  }
 }

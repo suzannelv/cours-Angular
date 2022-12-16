@@ -1,1 +1,5 @@
-<p>ajouter works!</p>
+<h2 class="text-center">Ajouter un produit</h2>
+<div>{{ produitReceive }}</div>
+
+
+<div><app-formulaire (produitEvent)="onUpdate($event)"></app-formulaire></div>

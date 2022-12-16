@@ -16,6 +16,10 @@ import { PageNotFoundComponentComponent } from './components/page-not-found-comp
 import { AjouterComponent } from './components/ajouter/ajouter.component';
 import { ModifierProduitComponent } from './components/modifier-produit/modifier-produit.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProduitCardComponent } from './components/produit-card/produit-card.component';
+import { FormsModule } from '@angular/forms';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { FormUpdateComponent } from './components/form-update/form-update.component';
 // import { registerLocaleData } from '@angular/common';
 // import localeFr from '@angular/common/locales/fr';
 // registerLocaleData(localeFr, 'fr');
@@ -37,11 +41,15 @@ import { MenuComponent } from './components/menu/menu.component';
     AjouterComponent,
     ModifierProduitComponent,
     MenuComponent,
+    ProduitCardComponent,
+    FormulaireComponent,
+    FormUpdateComponent,
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [AnimauxService, ProduitsService],
   // providers: [{provide: LOCALE_ID, useValue: "fr-FR" }],
